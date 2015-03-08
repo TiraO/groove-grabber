@@ -9,7 +9,7 @@ javascript:(function() {
         dispatchScroll($('#page-wrapper')[0], i*1000);
         var visibleSongs = grabVisibleSongs();
         allLines = allLines.concat(visibleSongs);
-      }else {
+      } else {
         clearInterval(intervalId);
         var allSongs = _.uniq(allLines);
         console.warn(allSongs.length + ' songs found');
@@ -38,7 +38,7 @@ javascript:(function() {
     var rows = $(".collection-grid .module-row.song");
     var currentNode;
     var getChildTexts = function(){ var childTexts= $(currentNode).children().map(function(){return $(this).text();});return childTexts;};
-    var lines = _.map(rows.map(function(){ currentNode = this;var songAndArtist = _.map(getChildTexts(),identity).splice(1,2).join(' - ');return songAndArtist; }),identity);
+    var lines = _.map(rows.map(function(){ currentNode = this;var artistAndSong = _.map(getChildTexts(),identity).splice(1,2).reverse().join(' - ');return artistAndSong; }),identity);
     return lines;
   };
 
