@@ -7,3 +7,5 @@ a bookmarklet for grabbing a list of songs from grooveshark (formatted for use w
 1. **Make sure pop ups are not blocked** from grooveshark.com
 1. Copy paste into Ivy...
 
+
+Or you know, just use something like http://soundiiz.com/#/converter instead!
